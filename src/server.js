@@ -5,7 +5,7 @@ const migrationsRun = require("./database/sqlite/migrations");
 
 
 const express = require('express');
-const routes = require("./Routes/user.routes"); // importa as rotas do usuário
+const routes = require("./Routes"); // importa as rotas do usuário
 
 migrationsRun();
 
