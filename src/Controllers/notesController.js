@@ -5,7 +5,7 @@ class NotesController{
         const {title, description,"score of the movie": score_of_the_movie, tags} = req.body;
         const {user_id} = req.params;
 
-        const {note_id} = await knex("Movie_Notes").insert({
+        const {note} = await knex("Movie_Notes").insert({
             title,
             description,
             user_id,
@@ -15,7 +15,7 @@ class NotesController{
     //Tags
         const tagsInsert = tags.map(name => {
         return {
-        note_id,
+        note,
         name,
         user_id
       }
