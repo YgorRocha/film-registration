@@ -1,6 +1,6 @@
 const knex = require('../database/knex');
 
-class NotesControlle{
+class NotesController{
     async create(req, res) {
         const {title, description,"score of the movie": score_of_the_movie, tags} = req.body;
         const {user_id} = req.params;
@@ -24,9 +24,9 @@ class NotesControlle{
  
      await knex("tags").insert(tagsInsert)
 
-     response.json();
+     res.json();
    } 
 }
 
 
-module.exports = NotesControlle;
+module.exports = NotesController;
